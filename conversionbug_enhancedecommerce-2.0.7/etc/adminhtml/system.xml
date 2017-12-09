@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category   Marketing
+ * @package    ConversionBug_EnhancedEcommerce
+ * @author     shiv kumar singh <shivam.kumar@conversionbug.com>
+ * @website    http://www.conversionbug.com/
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="google" translate="label" type="text" sortOrder="340" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="analytics" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="enable_enhanced_ecommerce" translate="label" type="select" sortOrder="21" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enabled EnhancedEcommerce</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/active">1</field>
+                    </depends>
+                </field>
+
+                <field id="enable_product_detail" translate="label" type="select" sortOrder="22" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enabled EnhancedEcommerce For Product Detail</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/enable_enhanced_ecommerce">1</field>
+                    </depends>
+                </field>
+                <field id="enable_addtocart" translate="label" type="select" sortOrder="23" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enabled EnhancedEcommerce For Product Added/Removed To Cart</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/enable_enhanced_ecommerce">1</field>
+                    </depends>
+                </field>
+                <!--<field id="enable_removefromcart" translate="label" type="select" sortOrder="24" showInDefault="1" showInWebsite="1"-->
+                       <!--showInStore="1">-->
+                    <!--<label>Enabled EnhancedEcommerce For Product Remove From Cart</label>-->
+                    <!--<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>-->
+                    <!--<depends>-->
+                        <!--<field id="*/*/enable_enhanced_ecommerce">1</field>-->
+                    <!--</depends>-->
+                <!--</field>-->
+                <field id="enable_productlist" translate="label" type="select" sortOrder="25" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enabled EnhancedEcommerce For Product List And Search Result Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/enable_enhanced_ecommerce">1</field>
+                    </depends>
+                </field>
+                <field id="enable_couponapplied" translate="label" type="select" sortOrder="26" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enabled EnhancedEcommerce For Coupon Applied</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/enable_enhanced_ecommerce">1</field>
+                    </depends>
+                </field>
+                <field id="enable_upsell" translate="label" type="select" sortOrder="27" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enabled EnhancedEcommerce For Upsell Products</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/enable_enhanced_ecommerce">1</field>
+                    </depends>
+                </field>
+                <field id="enable_related" translate="label" type="select" sortOrder="28" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enabled EnhancedEcommerce For Related Products</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="*/*/enable_enhanced_ecommerce">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

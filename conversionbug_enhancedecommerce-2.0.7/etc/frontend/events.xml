@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category   Marketing
+ * @package    ConversionBug_EnhancedEcommerce
+ * @author     shiv kumar singh <shivam.kumar@conversionbug.com>
+ * @website    http://www.conversionbug.com/
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <!--<event name="catalog_product_load_after">-->
+        <!--<observer name="ee_product_detail" instance="ConversionBug\EnhancedEcommerce\Observer\Productdetail" shared="false" />-->
+    <!--</event>-->
+    <event name="catalog_product_upsell">
+        <observer name="ee_product_detail" instance="ConversionBug\EnhancedEcommerce\Observer\Upsell" shared="false" />
+    </event>
+    <event name="catalog_controller_product_view">
+        <observer name="ee_product_detail" instance="ConversionBug\EnhancedEcommerce\Observer\Productdetail" shared="false" />
+    </event>
+    <event name="checkout_cart_product_add_after">
+        <observer name="ee_product_detail" instance="ConversionBug\EnhancedEcommerce\Observer\AddToCart" shared="false" />
+    </event>
+    <event name="sales_quote_remove_item">
+        <observer name="ee_product_detail" instance="ConversionBug\EnhancedEcommerce\Observer\AddToCart" shared="false" />
+    </event>
+    <event name="catalog_block_product_list_collection">
+        <observer name="ee_product_detail" instance="ConversionBug\EnhancedEcommerce\Observer\ProductList" shared="false" />
+    </event>
+    <event name="salesrule_validator_process">
+        <observer name="ee_product_detail" instance="ConversionBug\EnhancedEcommerce\Observer\Rule" shared="false" />
+    </event>
+
+</config>
